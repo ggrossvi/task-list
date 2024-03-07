@@ -1,6 +1,8 @@
-# This is a first draft of my portfolio web site.
+# This is a first draft of my #100 days of code web site.
 
-## The index page is a carousel of some projects I have worked on for #100 days of code.  
+### The index page is a carousel of areas of interest I have worked on for #100 days of code.  
+
+
 
 Project 1 recieves a response from an api and puts the response values in a table.  
 This was a bit challenging since the photos were all different sizes. I did not 
