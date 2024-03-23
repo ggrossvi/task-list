@@ -1,7 +1,7 @@
 //import "./css/styles.css";
 
 function myFunction() {
-  // Identifies the input element
+  // Identifies the to do input text element
   const input = document.getElementById("to-do-input");
   
   // Gets the value of the input element
@@ -9,46 +9,30 @@ function myFunction() {
   //create checkbox element
   let checkbox = document.createElement("input");
   // Assigning the attributes to created checkbox
+  
   checkbox.type = "checkbox";
   checkbox.name = "name";
   checkbox.value = "value";
-  checkbox.id = "id";
   // creating label for checkbox
   let label = document.createElement("label");
-
   // assigning attributes for the created label tag
   label.htmlFor = "id";
 
   // appending the created text to the created label tag
   //label.appendChild(document.createTextNode(inputValue));
 
-  // appending the checkbox and label to div
   
+  //div area to insert text into
   var divInsertArea = document.getElementById("insert-area");
-  var inputCheckbox = divInsertArea.appendChild(checkbox);
+  // Create a new text node with the input value
+  var textNode = document.createTextNode(inputValue);
 
-  // const paragraph = document.createElement("p");
-  //  paragraph.appendChild(checkbox);
-  // paragraph.appendChild(label);
-  
-  // divInsertArea.appendChild(checkbox);
-  //divInsertArea.appendChild(paragraph);
-  //divInsertArea.appendChild(document.createElement("br"));
+  // Create a new div to contain the checkbox and text
+  var containerDiv = document.createElement("div");
 
-  //var inputLabel = divInsertArea.appendChild(label);
-  //divInsertArea.appendChild(label);
-  //let brElement = document.createElement("br")
-  //divInsertArea.appendChild(brElement);
-  //divInsertArea.innerHTML += `${</br>}`;
-  //insert.innerHTML += `${inputCheckbox}${inputLabel}<br>`;
-  
-  //divInsertArea.innerHTML += `${inputLabel}<br>`;
-
-  // Sets the content of the insert area
-  //document.getElementById("insert-area").innerHTML += `${inputValue}`;
-  divInsertArea.innerHTML += `${inputValue}`;
-  divInsertArea.innerHTML += `<br>`;
-  
-  // Resets the form
+  // Append the checkbox and text node to the container div
+  containerDiv.appendChild(checkbox);
+  containerDiv.appendChild(textNode);
+  var inputCheckbox = divInsertArea.appendChild(containerDiv);
   input.value = "";
 }
