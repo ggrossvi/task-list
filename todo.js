@@ -20,17 +20,18 @@ function myFunction() {
   label.htmlFor = "id";
 
   // appending the created text to the created label tag
-  label.appendChild(document.createTextNode(inputValue));
+  //label.appendChild(document.createTextNode(inputValue));
 
   // appending the checkbox and label to div
+  
   var divInsertArea = document.getElementById("insert-area");
-  //var inputCheckbox = divInsertArea.appendChild(checkbox);
+  var inputCheckbox = divInsertArea.appendChild(checkbox);
 
   // const paragraph = document.createElement("p");
-  // paragraph.appendChild(checkbox);
+  //  paragraph.appendChild(checkbox);
   // paragraph.appendChild(label);
   
-  //divInsertArea.appendChild(checkbox);
+  // divInsertArea.appendChild(checkbox);
   //divInsertArea.appendChild(paragraph);
   //divInsertArea.appendChild(document.createElement("br"));
 
@@ -44,7 +45,10 @@ function myFunction() {
   //divInsertArea.innerHTML += `${inputLabel}<br>`;
 
   // Sets the content of the insert area
-  document.getElementById("insert-area").innerHTML += `${inputValue}<br>`;
+  //document.getElementById("insert-area").innerHTML += `${inputValue}`;
+  divInsertArea.innerHTML += `${inputValue}`;
+  divInsertArea.innerHTML += `<br>`;
+  
   // Resets the form
   input.value = "";
 }
