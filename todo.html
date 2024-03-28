@@ -35,9 +35,9 @@
       padding: 20px;
     }
 
-    .important-urgent {
+    #important-urgent {
       width: 40%; /* Adjust as needed */
-      padding: 20px;
+      padding: 10px;
       background-color: rgb(216, 88, 88);
       border-radius: 10px;
       /*
@@ -45,14 +45,17 @@
       */
       margin: 40px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box; 
+      height: 250px;
+      overflow: auto;
     }
 
-    .important-not-urgent {
+    #important-not-urgent {
       width: 40%; /* Adjust as needed */
-      padding: 20px;
+      padding: 10px;
       background-color: rgb(224, 94, 13);
       border-radius: 10px;
       /*
@@ -60,14 +63,17 @@
       */
       margin: 40px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box; 
+      height: 250px;
+      overflow: auto;
     }
 
-    .not-important-urgent {
+    #not-important-urgent {
       width: 40%; /* Adjust as needed */
-      padding: 20px;
+      padding: 10px;
       background-color: rgb(227, 208, 125);
       border-radius: 10px;
       /*
@@ -75,13 +81,16 @@
       */
       margin: 40px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box; 
+      height: 250px;
+      overflow: auto;
     }
-    .not-important-not-urgent {
+    #not-important-not-urgent {
       width: 40%; /* Adjust as needed */
-      padding: 20px;
+      padding: 10px;
       background-color: rgb(186, 215, 229);
       border-radius: 10px;
       /*
@@ -89,9 +98,12 @@
       */
       margin: 40px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box; 
+      height: 250px;
+      overflow: auto;
     }
     .data {
         padding: 20px;
@@ -174,7 +186,7 @@
       
         <input type="text" id="to-do-input" /><br>
         <div>
-        <select style="width:180px;">
+        <select id = "prioritySelect" style="width:180px;">
           <option value="0">Select priority:</option>
           <option value="1">Important - Urgent</option>
           <option value="2">Important - Not Urgent</option>
@@ -187,23 +199,23 @@
     
     <div id="insert-area"></div>
     <div class="important">
-      <div class="important-urgent">
+      <div id="important-urgent">
         <h2>Important/Urgent</h2>
-        <p>Content for container 1 goes here.</p>
+        <p></p>
       </div>
-      <div class="important-not-urgent">
+      <div id="important-not-urgent">
         <h2>Important/Not Urgent</h2>
-        <p>Content for container 2 goes here.</p>
+        <p></p>
       </div>
     </div>
     <div class="notImportant">
-      <div class="not-important-urgent">
+      <div id="not-important-urgent">
         <h2>Not Important/Urgent</h2>
-        <p>Content for container 3 goes here.</p>
+        <p></p>
       </div>
-      <div class="not-important-not-urgent">
+      <div id="not-important-not-urgent">
         <h2>Not Important/Not Urgent</h2>
-        <p>Content for container 4 goes here.</p>
+        <p></p>
       </div>
     </div>
   

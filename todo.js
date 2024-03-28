@@ -24,6 +24,13 @@ function myFunction() {
   
   //div area to insert text into
   var divInsertArea = document.getElementById("insert-area");
+  const importantUrgent = document.getElementById("important-urgent");
+  const importantNotUrgent = document.getElementById("important-not-urgent");
+  const notImportantUrgent = document.getElementById("not-important-urgent");
+  const notImportantNotUrgent = document.getElementById("not-important-not-urgent");
+
+
+
   // Create a new text node with the input value
   var textNode = document.createTextNode(inputValue);
 
@@ -33,6 +40,57 @@ function myFunction() {
   // Append the checkbox and text node to the container div
   containerDiv.appendChild(checkbox);
   containerDiv.appendChild(textNode);
-  var inputCheckbox = divInsertArea.appendChild(containerDiv);
+
+  //var inputCheckbox = divInsertArea.appendChild(containerDiv);
+
+  // Get the select element
+  var selectElement = document.getElementById("prioritySelect");
+
+  // Get the selected option value
+  var selectedValue = selectElement.value;
+
+  /*
+  if (selectedValue === "1") {
+    importantUrgent.appendChild(containerDiv);
+  }
+  if (selectedValue ==="Important - Urgent") {
+    importantUrgent.textContent = "This todo is important and urgent.";
+    //importantUrgent.appendChild(containerDiv);
+  }
+  */
+
+  console.log(selectedValue);
+
+  switch(selectedValue) {
+    case "1":
+      // Get the paragraph element within the div
+      var paragraphElement = importantUrgent.querySelector("p");
+      // Append the containerDiv to the paragraph element
+      paragraphElement.appendChild(containerDiv);
+      break;
+    case "2":
+      // Get the paragraph element within the div
+      var paragraphElement = importantNotUrgent.querySelector("p");
+      // Append the containerDiv to the paragraph element
+      paragraphElement.appendChild(containerDiv);
+      break;
+    case "3":
+      // Get the paragraph element within the div
+      var paragraphElement = notImportantUrgent.querySelector("p");
+      // Append the containerDiv to the paragraph element
+      paragraphElement.appendChild(containerDiv);
+      break;
+    case "4":
+      // Get the paragraph element within the div
+      var paragraphElement = notImportantNotUrgent.querySelector("p");
+      // Append the containerDiv to the paragraph element
+      paragraphElement.appendChild(containerDiv);
+      break;
+    default:
+      console.log("Invalid priority selected");
+  }
+
+
+
   input.value = "";
 }
